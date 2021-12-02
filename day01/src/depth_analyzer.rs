@@ -10,3 +10,11 @@ pub fn scan(depths: Vec<u32>) -> u32 {
     }
     return result;
 }
+
+pub fn merge(depths: Vec<u32>) -> Vec<u32> {
+    let mut result = Vec::new();
+    for i in 0..(depths.len()-2) {
+        result.push(depths[i] + depths[i+1] + depths[i+2]);
+    }
+    return result; 
+}

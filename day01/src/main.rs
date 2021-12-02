@@ -5,10 +5,15 @@ use day1::depth_analyzer;
 
 fn main() {
     first();
+    second();
 }
 
 fn first() {
     println!("first answer is : {}", depth_analyzer::scan(load_data()));
+}
+
+fn second() {
+    println!("second answer is : {}", depth_analyzer::scan(depth_analyzer::merge(load_data())));
 }
 
 fn load_data() -> Vec<u32>
